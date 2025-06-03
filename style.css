@@ -137,18 +137,50 @@ ul {
   font-size: 0.9rem;
 }
 
-#work-experience .job {
-  margin-bottom: 20px;
+#work {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 4rem 2rem;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
 }
 
-#work-experience h3 {
-  margin-bottom: 5px;
+#work h2 {
+  flex: 1 1 200px;
+  font-size: 2.5rem;
+  color: #222;
+  margin: 0;
+  padding-right: 2rem;
+  align-self: flex-start;
 }
 
-#work-experience ul {
-  margin-top: 5px;
-  padding-left: 20px;
+.work-content {
+  flex: 3 1 600px;
 }
+
+.work-item {
+  margin-bottom: 2rem;
+}
+
+.work-item h3 {
+  margin: 0 0 0.2rem;
+  font-size: 1.2rem;
+  color: #111;
+}
+
+.work-item p {
+  margin: 0.2rem 0;
+  color: #444;
+  line-height: 1.5;
+}
+
+.work-item em {
+  font-style: normal;
+  color: #888;
+}
+
 
 #your-name {
   /* font-family: 'Pacifico', cursive; */
