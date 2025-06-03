@@ -145,3 +145,49 @@ ul {
   padding-left: 20px;
 }
 
+#your-name {
+  /* font-family: 'Pacifico', cursive; */
+  font-family: "Jersey 20", sans-serif;
+  font-size: 5rem;
+  color: #333;
+  transition: text-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+#your-name:hover {
+  text-shadow:
+    0 0 5px rgb(3, 3, 242),
+    0 0 10px rgb(11, 11, 238),
+    0 0 20px rgb(109, 210, 247),
+    0 0 30px #0ff;
+  color: #56ccf4;
+}
+
+.cherry-bomb-one-regular {
+  font-family: "Cherry Bomb One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.jersey-20-regular {
+  font-family: "Jersey 20", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.section-block {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+  padding: 2rem;
+  border-radius: 16px;
+  margin: 2rem 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.section-block:hover {
+  transform: translateY(-4px);
+}
+
+
