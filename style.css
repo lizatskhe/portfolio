@@ -100,3 +100,19 @@ ul {
   }
 }
 
+.btn-cv {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #007acc;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin: 20px 0;
+}
+
+.btn-cv:hover {
+  background-color: #005fa3;
+}
+
