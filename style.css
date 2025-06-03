@@ -30,36 +30,41 @@ ul {
   padding: 1rem;
   margin: 1rem 0;
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
+
 .project h3 {
   margin-top: 0;
 }
+
 .project a {
   color: #007acc;
   text-decoration: none;
 }
+
 .project a:hover {
   text-decoration: underline;
 }
 
 #projects-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-  gap: 20px; /* spacing between blocks */
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 equal columns */
+  gap: 20px;
+  /* spacing between blocks */
   margin-top: 20px;
 }
 
 /* Make project blocks look like cards */
 .project {
-  background: #f9f9f9; 
+  background: #f9f9f9;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
+
   /* To make roughly square-ish: */
   aspect-ratio: 1 / 1;
   /* optional min-height if you want a minimum size */
@@ -248,4 +253,30 @@ ul {
   font-size: 0.95rem;
   color: #555;
   line-height: 1.4;
+}
+
+#about {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+}
+
+#about h2 {
+  flex: 1 1 200px;
+  font-size: 2.5rem;
+  color: #222;
+  margin: 0;
+  padding-right: 2rem;
+  align-self: flex-start;
+}
+
+.about-content {
+  flex: 3 1 600px;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
 }
