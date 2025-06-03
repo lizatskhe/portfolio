@@ -158,14 +158,32 @@ ul {
 
 .work-content {
   flex: 3 1 600px;
+  position: relative;
+  padding-left: 1.5rem;
+  border-left: 2px solid #ddd;
 }
 
 .work-item {
-  margin-bottom: 2rem;
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.work-item::before {
+  content: '';
+  position: absolute;
+  left: -1.1rem;
+  top: 0.3rem;
+  width: 12px;
+  height: 12px;
+  background-color: #555;
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #ccc;
 }
 
 .work-item h3 {
-  margin: 0 0 0.2rem;
+  margin: 0 0 0.3rem;
   font-size: 1.2rem;
   color: #111;
 }
@@ -180,6 +198,7 @@ ul {
   font-style: normal;
   color: #888;
 }
+
 
 
 #your-name {
