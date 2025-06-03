@@ -15,21 +15,62 @@
   <main>
     <section id="about">
       <h2>About Me</h2>
-      <p>Short intro about your transition from software to AI/robotics.</p>
+      <p>I’m a software engineer and AI enthusiast with hands-on experience in backend development, machine learning, and intelligent systems. I've worked on real-world projects ranging from data-driven applications in finance to ML-powered recommendation tools — always with clean, scalable code and a collaborative mindset.</p>
+
+<p> Currently pursuing a joint Master’s in Artificial Intelligence and Robotics, I’m deepening my expertise in areas like computer vision, reinforcement learning, and human-robot interaction 🤖. I enjoy building systems that are not just functional, but thoughtful — blending precision with creativity. </p>
+
+<p>Skilled in Python, Java, TensorFlow, PyTorch, and more — I’m always ready to learn, adapt, and solve meaningful problems 🚀</p>
     </section>
 
-    <section id="projects">
+    <!-- <section id="projects">
       <h2>Projects</h2>
       <ul>
-        <li><strong>Project 1</strong> – Description, tools used</li>
-        <li><strong>Project 2</strong> – Description, tools used</li>
+        <li><strong>Cultural Bias</strong> – Description, tools used</li>
+        <li><strong>OCR Text Cleaning</strong> – Description, tools used</li>
+        <li><strong>Calendar</strong> – Description, tools used</li>
+        <li><strong>Pacman</strong> – Description, tools used</li>
+        <li><strong>Origami flower</strong> – Description, tools used</li>
       </ul>
-    </section>
+    </section> -->
+
+    <section id="projects">
+  <h2>Projects</h2>
+
+  <div id="projects-container"></div>
+
+</section>
+
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>Email: yourname@example.com | GitHub | LinkedIn</p>
+      <p>Email: yelizavetatskh26@gmail.com | GitHub | LinkedIn</p>
     </section>
   </main>
+
+  <script>
+  async function loadProjects() {
+    const response = await fetch('projects.json');
+    const projects = await response.json();
+
+    const container = document.getElementById('projects-container');
+
+    projects.forEach(proj => {
+      const techList = proj.tech.join(', ');
+      const projectHTML = `
+        <div class="project">
+          <h3>${proj.emoji} ${proj.title}</h3>
+          <p><em>${proj.description}</em></p>
+          <p><strong>Tech:</strong> ${techList}</p>
+          <p>${proj.details}</p>
+          <p><a href="${proj.github}" target="_blank">GitHub</a></p>
+        </div>
+      `;
+      container.insertAdjacentHTML('beforeend', projectHTML);
+    });
+  }
+
+  window.addEventListener('DOMContentLoaded', loadProjects);
+</script>
+
 </body>
 </html>

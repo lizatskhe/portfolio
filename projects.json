@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Deepfake Detection with EfficientNet",
+    "emoji": "🧠",
+    "description": "Detecting manipulated faces using a lightweight CNN and adversarial training.",
+    "tech": ["Python", "PyTorch", "EfficientNet", "DFFD dataset"],
+    "details": "Implemented a deepfake classifier and experimented with gradient regularization for adversarial robustness. Achieved 92% accuracy and presented findings in a computer vision class project.",
+    "github": "https://github.com/yourusername/deepfake-detection"
+  },
+  {
+    "title": "Cultural Bias Classification in Multilingual Data",
+    "emoji": "🌍",
+    "description": "Classifying culturally agnostic vs. culturally representative concepts using feature engineering and ML models.",
+    "tech": ["Python", "scikit-learn", "pandas", "Random Forest", "DistilBERT"],
+    "details": "Worked on a multilingual NLP project to detect cultural bias in a structured dataset containing Wikidata-linked concepts. Engineered features to distinguish culturally agnostic items from culturally representative ones and implemented a Random Forest classifier for baseline evaluation. Also experimented with DistilBERT to compare model-based vs. non-model approaches.",
+    "github": "https://github.com/yourusername/cultural-bias-nlp"
+  },
+  {
+    "title": "OCRed Text Cleaning & Preprocessing",
+    "emoji": "🧹",
+    "description": "Cleaned and structured noisy OCR output for downstream NLP tasks using Python-based text processing.",
+    "tech": ["Python", "regex", "NLTK", "JSON", "Pandas"],
+    "details": "Processed the first 5,000 tokens of an OCR-scanned version of The Vampyre to correct spelling errors, remove artifacts, and standardize formatting. Designed a preprocessing pipeline to tokenize, clean, and convert the data into a structured format suitable for language model training or literary analysis.",
+    "github": "https://github.com/yourusername/ocr-text-cleaning"
+  },
+  {
+    "title": "Animated Origami Flower Simulation",
+    "emoji": "🌸",
+    "description": "WebGL simulation of a procedurally animated origami tulip with realistic folding and lighting.",
+    "tech": ["WebGL", "GLSL", "JavaScript", "3D transformation matrices"],
+    "details": "Created a dynamic 3D animation of a tulip folding from a flat sheet using WebGL. Implemented procedural mesh generation, realistic folding behavior, dynamic lighting, shadows, and interactive camera controls. The project explores the intersection of computer graphics and generative art.",
+    "github": "https://github.com/yourusername/origami-tulip-simulation"
+  },
+  {
+    "title": "Pacman AI Agent",
+    "emoji": "👾",
+    "description": "Designed and implemented AI agents for the Pacman game using search algorithms and reinforcement learning.",
+    "tech": ["Python", "A* Search", "Reinforcement Learning", "Minimax Algorithm"],
+    "details": "Developed intelligent Pacman agents capable of navigating mazes, avoiding ghosts, and collecting pellets efficiently. Implemented A* search for pathfinding, minimax with alpha-beta pruning for adversarial play, and experimented with reinforcement learning approaches to improve agent performance.",
+    "github": "https://github.com/yourusername/pacman-ai"
+  },
+  {
+    "title": "CartPole Reinforcement Learning",
+    "emoji": "🎯",
+    "description": "Implemented multiple RL algorithms to train an agent to balance a pole on a cart in a simulated environment.",
+    "tech": ["Python", "OpenAI Gym", "TensorFlow/PyTorch", "Q-Learning", "DQN"],
+    "details": "Developed and compared reinforcement learning models to solve the classic CartPole balancing problem. Tested algorithms including Q-Learning and Deep Q-Networks, analyzed their performance and convergence speed, and visualized learning curves. The project deepened understanding of RL fundamentals and practical implementation.",
+    "github": "https://github.com/yourusername/cartpole-rl"
+  }
+]

@@ -23,3 +23,23 @@ ul {
   list-style: none;
   padding: 0;
 }
+
+.project {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.project h3 {
+  margin-top: 0;
+}
+.project a {
+  color: #007acc;
+  text-decoration: none;
+}
+.project a:hover {
+  text-decoration: underline;
+}
+
