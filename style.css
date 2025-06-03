@@ -43,3 +43,60 @@ ul {
   text-decoration: underline;
 }
 
+#projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 20px; /* spacing between blocks */
+  margin-top: 20px;
+}
+
+/* Make project blocks look like cards */
+.project {
+  background: #f9f9f9; 
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  /* To make roughly square-ish: */
+  aspect-ratio: 1 / 1;
+  /* optional min-height if you want a minimum size */
+  min-height: 250px;
+}
+
+/* Styling headings and links inside project blocks */
+.project h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.project p {
+  flex-grow: 1;
+  margin-bottom: 10px;
+}
+
+.project a {
+  align-self: flex-start;
+  color: #007acc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  #projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  #projects-container {
+    grid-template-columns: 1fr;
+  }
+}
+
