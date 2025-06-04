@@ -24,84 +24,78 @@ ul {
   padding: 0;
 }
 
-.project {
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  padding: 1rem;
-  margin: 1rem 0;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-.project h3 {
-  margin-top: 0;
-}
-
-.project a {
-  color: #007acc;
-  text-decoration: none;
-}
-
-.project a:hover {
-  text-decoration: underline;
-}
-
 #projects-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   /* 3 equal columns */
   gap: 20px;
-  /* spacing between blocks */
   margin-top: 20px;
 }
 
-/* Make project blocks look like cards */
 .project {
-  background: #f9f9f9;
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+  border-radius: 16px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-
-  /* To make roughly square-ish: */
-  aspect-ratio: 1 / 1;
-  /* optional min-height if you want a minimum size */
-  min-height: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  min-height: 280px;
 }
 
-/* Styling headings and links inside project blocks */
+.project-emoji {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
 .project h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  color: #111;
 }
 
 .project p {
   flex-grow: 1;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
   margin-bottom: 10px;
 }
 
-.project a {
-  align-self: flex-start;
-  color: #007acc;
-  text-decoration: none;
-  font-weight: bold;
+.tech-tags span {
+  background-color: #e5e7eb;
+  color: #111;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
 }
 
-.project a:hover {
-  text-decoration: underline;
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(64, 0, 255, 0.6);
 }
+
 
 @media (max-width: 900px) {
   #projects-container {
     grid-template-columns: repeat(2, 1fr);
+    /* 2 columns on tablets */
   }
 }
 
 @media (max-width: 600px) {
   #projects-container {
     grid-template-columns: 1fr;
+    /* 1 column on phones */
   }
 }
 
@@ -375,4 +369,66 @@ ul {
   height: 10px;
   /* background-color: #000000; /* your accent color */
   /* border-radius: 90%; */
+}
+
+#contact {
+  background: #ffffff;
+  padding: 2rem;
+  backdrop-filter: blur(5px);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+#contact .section-header {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin: 0;
+  /* Remove bottom margin */
+}
+
+#contact p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+#contact a {
+  color: #007acc;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 1rem;
+  transition: color 0.3s ease;
+}
+
+#contact a:first-child {
+  margin-left: 0;
+}
+
+#contact a:hover {
+  color: #ff69b4;
+  /* pink hover */
+  text-decoration: underline;
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 600px) {
+  #contact {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #contact p {
+    margin-top: 0.75rem;
+  }
+
+  #contact a {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
 }
