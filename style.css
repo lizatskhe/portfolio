@@ -169,7 +169,7 @@ ul {
   margin-bottom: 2.5rem;
 }
 
-.work-item::before {
+/* .work-item::before {
   content: '';
   position: absolute;
   left: -1.1rem;
@@ -180,7 +180,7 @@ ul {
   border: 3px solid white;
   border-radius: 50%;
   box-shadow: 0 0 0 2px #ccc;
-}
+} */
 
 .work-item h3 {
   margin: 0 0 0.3rem;
