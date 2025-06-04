@@ -358,10 +358,18 @@ ul {
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
 }
 
+
 .section-header {
   font-size: 2rem;
   font-weight: 700;
-  color: #000000;
+  color: #222;
   margin-bottom: 1rem;
   text-align: left;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+
+.section-header:hover {
+  color: #444;
 }
