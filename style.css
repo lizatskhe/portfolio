@@ -42,8 +42,8 @@ nav {
   margin: 0 auto;
   padding: 0 2rem;
   display: flex;
-  justify-content: right;
-  align-items: right;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav-links {
@@ -79,6 +79,84 @@ nav {
   background: rgba(0, 123, 255, 0.15);
 }
 
+.nav-name {
+  font-family: 'Jersey 20', cursive;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+}
+
+.nav-name:hover {
+  color: #1b03f3;
+}
+
+/* .typing-text::after {
+  content: '|';
+  animation: blink 0.7s infinite;
+  color: #3001da;
+} */
+
+@keyframes blink {
+
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateX(-50%) translateY(5px);
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(10px);
+  }
+}
+
+.typing-cursor::after {
+  content: '|';
+  animation: blink 0.5s infinite;
+  color: #007bff;
+}
+
+@keyframes blink {
+
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.typing-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2s steps(16, end) forwards;
+  width: 0;
+}
+
 /* Mobile Navigation */
 .nav-toggle {
   display: none;
@@ -89,37 +167,14 @@ nav {
   color: #333;
 }
 
-@media (max-width: 768px) {
-  .nav-toggle {
-    display: block;
-  }
 
-  .nav-links {
-    position: fixed;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(10px);
-    flex-direction: column;
-    padding: 2rem;
-    gap: 1rem;
-    transform: translateY(-100vh);
-    transition: transform 0.3s ease;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-links.active {
-    transform: translateY(0);
-  }
-
-  .nav-links a {
-    display: block;
-    text-align: center;
-    padding: 1rem;
-    border-radius: 10px;
-  }
+.nav-links a {
+  display: block;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
 }
+
 
 /* Adjust body to account for fixed nav */
 body {

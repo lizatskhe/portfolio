@@ -14,6 +14,9 @@
 <body>
   <nav id="navbar">
     <div class="nav-container">
+      <a href="#" class="nav-name">
+        <span id="typing-name" class="typing-cursor"></span>
+      </a>
       <button class="nav-toggle" id="nav-toggle">☰</button>
       <ul class="nav-links" id="nav-links">
         <li><a href="#education" class="nav-link">Education</a></li>
@@ -153,6 +156,69 @@
   </main>
 
   <script>
+    function typeWriterEffect() {
+      const text = "Yelizaveta Tskhe";
+      const typingElement = document.getElementById('typing-name');
+      let i = 0;
+      typingElement.textContent = '';
+
+      function typeWriter() {
+        if (i < text.length) {
+          typingElement.textContent += text.charAt(i);
+          i++;
+          setTimeout(typeWriter, 120); // Adjust speed here (120ms per letter)
+        } else {
+          setTimeout(() => {
+            typingElement.classList.remove('typing-cursor');
+          }, 1000);
+        }
+      }
+
+      typeWriter();
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(typeWriterEffect, 500); // Small delay before starting
+    });
+
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+
+    function updateActiveNavLink() {
+      const sections = document.querySelectorAll('.section-block');
+      const navLinks = document.querySelectorAll('.nav-link');
+
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= (sectionTop - 150)) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateActiveNavLink);
+
+    window.addEventListener('DOMContentLoaded', updateActiveNavLink);
+
     async function loadProjects() {
       const response = await fetch('projects.json');
       const projects = await response.json();
