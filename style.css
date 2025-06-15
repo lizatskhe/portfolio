@@ -91,12 +91,6 @@ nav {
   color: #1b03f3;
 }
 
-/* .typing-text::after {
-  content: '|';
-  animation: blink 0.7s infinite;
-  color: #3001da;
-} */
-
 @keyframes blink {
 
   0%,

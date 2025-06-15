@@ -14,8 +14,8 @@
 <body>
   <nav id="navbar">
     <div class="nav-container">
-      <a href="#" class="nav-name">
-        <span id="typing-name" class="typing-cursor"></span>
+      <a href="#" class="nav-name" id="nav-name">
+        <span id="typing-name"></span>
       </a>
       <button class="nav-toggle" id="nav-toggle">☰</button>
       <ul class="nav-links" id="nav-links">
@@ -156,18 +156,22 @@
   </main>
 
   <script>
+    // Typing animation for name (only when scrolled)
     function typeWriterEffect() {
       const text = "Yelizaveta Tskhe";
       const typingElement = document.getElementById('typing-name');
       let i = 0;
+
       typingElement.textContent = '';
+      typingElement.classList.add('typing-cursor');
 
       function typeWriter() {
         if (i < text.length) {
           typingElement.textContent += text.charAt(i);
           i++;
-          setTimeout(typeWriter, 120); // Adjust speed here (120ms per letter)
+          setTimeout(typeWriter, 80); // Slightly faster since it's triggered by scroll
         } else {
+          // Remove blinking cursor after typing is complete
           setTimeout(() => {
             typingElement.classList.remove('typing-cursor');
           }, 1000);
@@ -177,10 +181,34 @@
       typeWriter();
     }
 
-    window.addEventListener('DOMContentLoaded', () => {
-      setTimeout(typeWriterEffect, 500); // Small delay before starting
-    });
+    // Show/hide nav name based on scroll position
+    function handleNavNameVisibility() {
+      const header = document.querySelector('header');
+      const navName = document.getElementById('nav-name');
+      const headerBottom = header.offsetTop + header.offsetHeight;
 
+      if (window.scrollY > headerBottom - 100) {
+        if (!navName.classList.contains('show')) {
+          navName.classList.add('show');
+          // Start typing animation when name becomes visible
+          typeWriterEffect();
+        }
+      } else {
+        navName.classList.remove('show');
+        // Reset typing when hidden
+        const typingElement = document.getElementById('typing-name');
+        typingElement.textContent = '';
+        typingElement.classList.remove('typing-cursor');
+      }
+    }
+
+    // Listen for scroll events
+    window.addEventListener('scroll', handleNavNameVisibility);
+
+    // Check initial position
+    window.addEventListener('DOMContentLoaded', handleNavNameVisibility);
+
+    // Mobile navigation toggle
     const navToggle = document.getElementById('nav-toggle');
     const navLinks = document.getElementById('nav-links');
 
@@ -188,12 +216,14 @@
       navLinks.classList.toggle('active');
     });
 
+    // Close mobile menu when clicking on a link
     document.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('active');
       });
     });
 
+    // Active navigation highlighting
     function updateActiveNavLink() {
       const sections = document.querySelectorAll('.section-block');
       const navLinks = document.querySelectorAll('.nav-link');
@@ -215,8 +245,10 @@
       });
     }
 
+    // Update active link on scroll
     window.addEventListener('scroll', updateActiveNavLink);
 
+    // Update active link on page load
     window.addEventListener('DOMContentLoaded', updateActiveNavLink);
 
     async function loadProjects() {
