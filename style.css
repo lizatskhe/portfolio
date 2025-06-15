@@ -335,7 +335,6 @@ html {
 
 
 #your-name {
-  /* font-family: 'Pacifico', cursive; */
   font-family: "Jersey 20", sans-serif;
   font-size: 5rem;
   color: #333;
@@ -345,11 +344,11 @@ html {
 
 #your-name:hover {
   text-shadow:
-    0 0 5px rgb(3, 3, 242),
-    0 0 10px rgb(11, 11, 238),
-    0 0 20px rgb(109, 210, 247),
-    0 0 30px #0ff;
-  color: #56ccf4;
+    0 0 5px rgb(2, 7, 100),
+    0 0 10px rgb(4, 4, 247),
+    0 0 20px rgb(3, 0, 5),
+    0 0 30px rgb(0, 0, 0);
+  color: #0397f3;
 }
 
 .cherry-bomb-one-regular {
