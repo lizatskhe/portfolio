@@ -81,7 +81,7 @@ ul {
 
 .project:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 20px rgba(64, 0, 255, 0.6);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.6);
 }
 
 
