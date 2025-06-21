@@ -63,7 +63,7 @@
       "Reinforcement Learning",
       "Minimax Algorithm"
     ],
-    "details": "Developed intelligent Pacman agents capable of navigating mazes, avoiding ghosts, and collecting pellets efficiently. Implemented A* search for pathfinding, minimax with alpha-beta pruning for adversarial play, and experimented with reinforcement learning approaches to improve agent performance.",
+    "details": "Developed a team of intelligent agents for the Pacman AI Capture the Flag contest using Python. Implemented offensive and defensive reflex-based agents that utilize A* search, dynamic feature evaluation, and adaptive strategies to optimize food collection, evade ghosts, and defend territory. The offensive agent balances exploration with risk-aware behaviors, while the defensive agent patrols key zones and tracks enemy invaders. Designed with modular architecture and tunable heuristics for flexible experimentation.",
     "github": "https://github.com/yourusername/pacman-ai"
   },
   {
