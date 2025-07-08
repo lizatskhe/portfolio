@@ -9,7 +9,7 @@
       "EfficientNet",
       "DFFD dataset"
     ],
-    "details": "Developed a robust deepfake detection system using a pretrained EfficientNetB0 backbone and improved generalization with a gradient regularization technique. This method penalizes overreliance on shallow texture patterns by perturbing feature statistics (mean and standard deviation) and combining classification and robustness gradients during training. Evaluated model resilience using adversarial attacks (FGSM and PGD), demonstrating improved robustness over the baseline. Dataset constructed by combining FaceForensics++ frames to address class imbalance in DFFD.",
+    "details": "Built a robust deepfake detection system for a Computer Vision course project using EfficientNetB0 and gradient regularization. Improved generalization by penalizing reliance on shallow texture patterns via perturbed feature statistics. Evaluated robustness under FGSM and PGD attacks. Dataset curated by combining FaceForensics++ frames and DFFD to address class imbalance. Developed collaboratively with a classmate.",
     "github": "https://github.com/lizatskhe/cv-project2"
   },
   {
@@ -31,12 +31,11 @@
     "emoji": "🧹",
     "description": "Cleaned and structured noisy OCR output for downstream NLP tasks using Python-based text processing.",
     "tech": [
-      "Python",
-      "NLTK",
-      "JSON",
+      "Python", "Llama", "Phi-3",
+      "Gemini-2.0",
       "Pandas"
     ],
-    "details": "Developed a pipeline for correcting OCR errors in historical texts using open-source large language models (Llama-3 8B and Phi-3 Mini). Evaluated model outputs with automatic metrics (ROUGE), human annotation, and LLM-based judgment (Gemini-2.0, Prometheus). Conducted detailed correlation analysis to compare evaluation methods and fine-tuned post-processing for cleaner outputs. Achieved high agreement between LLM and human scores, demonstrating the models' effectiveness in realistic text restoration tasks.",
+    "details": "Developed a pipeline for correcting OCR errors in historical texts using open-source large language models (Llama-3 8B and Phi-3 Mini). Evaluated model outputs with automatic metrics (ROUGE), human annotation, and LLM-based judgment (Gemini-2.0). Conducted detailed correlation analysis to compare evaluation methods and fine-tuned post-processing for cleaner outputs. Achieved high agreement between LLM and human scores, demonstrating the models' effectiveness in realistic text restoration tasks.",
     "github": "https://github.com/lizatskhe/ocr-text-cleaning"
   },
   {
@@ -59,10 +58,9 @@
     "tech": [
       "Python",
       "A* Search",
-      "Reinforcement Learning",
-      "Minimax Algorithm"
+      "Reinforcement Learning"
     ],
-    "details": "Developed a team of intelligent agents for the Pacman AI Capture the Flag contest using Python. Implemented offensive and defensive reflex-based agents that utilize A* search, dynamic feature evaluation, and adaptive strategies to optimize food collection, evade ghosts, and defend territory. The offensive agent balances exploration with risk-aware behaviors, while the defensive agent patrols key zones and tracks enemy invaders. Designed with modular architecture and tunable heuristics for flexible experimentation.",
+    "details": "Developed a team of intelligent agents for the Pacman AI Capture the Flag contest using Python. Implemented offensive and defensive reflex-based agents that utilize A* search, dynamic feature evaluation, and adaptive strategies to optimize food collection, evade ghosts, and defend territory. ",
     "github": "https://github.com/lizatskhe/pacman-ctf/tree/main"
   },
   {
@@ -73,10 +71,9 @@
       "Python",
       "OpenAI Gym",
       "TensorFlow/PyTorch",
-      "Q-Learning",
-      "DQN"
+      "Q-Learning"
     ],
-    "details": "Developed and compared reinforcement learning models to solve the classic CartPole balancing problem. Tested algorithms including Q-Learning and Deep Q-Networks, analyzed their performance and convergence speed, and visualized learning curves. The project deepened understanding of RL fundamentals and practical implementation.",
+    "details": "Implemented and evaluated the SARSA algorithm to solve the classic CartPole balancing problem. Explored on-policy reinforcement learning by discretizing the state space and using SARSA to update the Q-table based on action-value pairs. ",
     "github": "https://github.com/lizatskhe/cartpole-sarsa/tree/main"
   }
 ]
