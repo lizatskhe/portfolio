@@ -170,17 +170,14 @@ nav {
 }
 
 
-/* Adjust body to account for fixed nav */
 body {
   padding-top: 80px;
 }
 
-/* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
 }
 
-/* Section spacing adjustment */
 .section-block {
   scroll-margin-top: 100px;
 }
@@ -249,14 +246,12 @@ html {
 @media (max-width: 900px) {
   #projects-container {
     grid-template-columns: repeat(2, 1fr);
-    /* 2 columns on tablets */
   }
 }
 
 @media (max-width: 600px) {
   #projects-container {
     grid-template-columns: 1fr;
-    /* 1 column on phones */
   }
 }
 
@@ -577,7 +572,6 @@ html {
   text-decoration: underline;
 }
 
-/* Responsive: stack on smaller screens */
 @media (max-width: 600px) {
   #contact {
     flex-direction: column;

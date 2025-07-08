@@ -107,11 +107,13 @@
           <h3> IT Project Coordinator, DHL IT Services</h3>
           <p><em>Prague, CZ — May 2021 to Jan 2023</em></p>
           <ul>
-            <li>Supported the rollout of the Zscaler security solution to over 100,000 users by coordinating user access, collecting feedback,
+            <li>Supported the rollout of the Zscaler security solution to over 100,000 users by coordinating user
+              access, collecting feedback,
               and resolving usage issues across DHL’s global workforce.</li>
             <li>Assisted the project manager in tracking milestones, monitoring progress, and organizing project
               documentation.</li>
-            <li>Provided technical assistance to 200+ employees using Zscaler, addressing access problems, setup questions,
+            <li>Provided technical assistance to 200+ employees using Zscaler, addressing access problems, setup
+              questions,
               and issue escalations.</li>
             <li>Compiled and analyzed weekly performance and adoption reports using MS Excel and internal tools,
               highlighting key insights for senior stakeholders.</li>
@@ -153,15 +155,14 @@
       <div class="section-header">Contact</div>
       <p>
         <a href="mailto:yelizavetatskhe26@gmail.com">yelizavetatskhe26@gmail.com</a>
-            &nbsp;|&nbsp;
+        &nbsp;|&nbsp;
         <a href="https://www.linkedin.com/in/yelizaveta-tskhe-7693501a4/">LinkedIn</a>
       </p>
     </section>
   </main>
 
   <script>
-    // Typing animation for name (only when scrolled)
-    let typingTimeouts = []; // to store all typing timeouts
+    let typingTimeouts = [];
     let typingInProgress = false;
 
     function clearTyping() {
@@ -207,23 +208,20 @@
       if (window.scrollY > headerBottom - 100) {
         if (!navName.classList.contains('show')) {
           navName.classList.add('show');
-          clearTyping(); // just in case it's partially typed
-          typeWriterEffect(); // start typing from beginning
+          clearTyping();
+          typeWriterEffect();
         }
       } else {
         navName.classList.remove('show');
-        clearTyping(); // cancel and clear everything
+        clearTyping();
       }
     }
 
 
-    // Listen for scroll events
     window.addEventListener('scroll', handleNavNameVisibility);
 
-    // Check initial position
     window.addEventListener('DOMContentLoaded', handleNavNameVisibility);
 
-    // Mobile navigation toggle
     const navToggle = document.getElementById('nav-toggle');
     const navLinks = document.getElementById('nav-links');
 
@@ -231,14 +229,12 @@
       navLinks.classList.toggle('active');
     });
 
-    // Close mobile menu when clicking on a link
     document.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('active');
       });
     });
 
-    // Active navigation highlighting
     function updateActiveNavLink() {
       const sections = document.querySelectorAll('.section-block');
       const navLinks = document.querySelectorAll('.nav-link');
@@ -260,10 +256,8 @@
       });
     }
 
-    // Update active link on scroll
     window.addEventListener('scroll', updateActiveNavLink);
 
-    // Update active link on page load
     window.addEventListener('DOMContentLoaded', updateActiveNavLink);
 
     async function loadProjects() {
