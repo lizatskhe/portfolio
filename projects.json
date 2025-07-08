@@ -10,10 +10,10 @@
       "DFFD dataset"
     ],
     "details": "Developed a robust deepfake detection system using a pretrained EfficientNetB0 backbone and improved generalization with a gradient regularization technique. This method penalizes overreliance on shallow texture patterns by perturbing feature statistics (mean and standard deviation) and combining classification and robustness gradients during training. Evaluated model resilience using adversarial attacks (FGSM and PGD), demonstrating improved robustness over the baseline. Dataset constructed by combining FaceForensics++ frames to address class imbalance in DFFD.",
-    "github": "https://github.com/yourusername/deepfake-detection"
+    "github": "https://github.com/lizatskhe/cv-project2"
   },
   {
-    "title": "Cultural Bias Classification in Multilingual Data",
+    "title": "Cultural Bias Classification",
     "emoji": "🌍",
     "description": "Classifying culturally agnostic vs. culturally representative concepts using feature engineering and ML models.",
     "tech": [
@@ -24,7 +24,7 @@
       "DistilBERT"
     ],
     "details": "Built a pipeline to detect cultural bias in multilingual data using both traditional ML (Random Forests) and fine-tuned language models (DistilBERT). Engineered features from Wikidata entries and addressed class imbalance with weighted loss functions. Also applied LLMs (Phi-3, Llama-3) for OCR error correction and evaluated their output using ROUGE and human agreement metrics. Achieved strong performance with interpretable results and robust cross-model evaluation.",
-    "github": "https://github.com/yourusername/cultural-bias-nlp"
+    "github": "https://github.com/lizatskhe/cultural-bias-classification/tree/main"
   },
   {
     "title": "OCRed Text Cleaning & Preprocessing",
@@ -32,13 +32,12 @@
     "description": "Cleaned and structured noisy OCR output for downstream NLP tasks using Python-based text processing.",
     "tech": [
       "Python",
-      "regex",
       "NLTK",
       "JSON",
       "Pandas"
     ],
     "details": "Developed a pipeline for correcting OCR errors in historical texts using open-source large language models (Llama-3 8B and Phi-3 Mini). Evaluated model outputs with automatic metrics (ROUGE), human annotation, and LLM-based judgment (Gemini-2.0, Prometheus). Conducted detailed correlation analysis to compare evaluation methods and fine-tuned post-processing for cleaner outputs. Achieved high agreement between LLM and human scores, demonstrating the models' effectiveness in realistic text restoration tasks.",
-    "github": "https://github.com/yourusername/ocr-text-cleaning"
+    "github": "https://github.com/lizatskhe/ocr-text-cleaning"
   },
   {
     "title": "Animated Origami Flower Simulation",
@@ -51,7 +50,7 @@
       "3D transformation matrices"
     ],
     "details": "Created a dynamic 3D animation of a tulip folding from a flat sheet using WebGL. Implemented procedural mesh generation, realistic folding behavior, dynamic lighting, shadows, and interactive camera controls. The project explores the intersection of computer graphics and generative art.",
-    "github": "https://github.com/yourusername/origami-tulip-simulation"
+    "github": "https://github.com/lizatskhe/origami-flower"
   },
   {
     "title": "Pacman AI Agent",
@@ -64,7 +63,7 @@
       "Minimax Algorithm"
     ],
     "details": "Developed a team of intelligent agents for the Pacman AI Capture the Flag contest using Python. Implemented offensive and defensive reflex-based agents that utilize A* search, dynamic feature evaluation, and adaptive strategies to optimize food collection, evade ghosts, and defend territory. The offensive agent balances exploration with risk-aware behaviors, while the defensive agent patrols key zones and tracks enemy invaders. Designed with modular architecture and tunable heuristics for flexible experimentation.",
-    "github": "https://github.com/yourusername/pacman-ai"
+    "github": "https://github.com/lizatskhe/pacman-ctf/tree/main"
   },
   {
     "title": "CartPole Reinforcement Learning",
@@ -78,6 +77,6 @@
       "DQN"
     ],
     "details": "Developed and compared reinforcement learning models to solve the classic CartPole balancing problem. Tested algorithms including Q-Learning and Deep Q-Networks, analyzed their performance and convergence speed, and visualized learning curves. The project deepened understanding of RL fundamentals and practical implementation.",
-    "github": "https://github.com/yourusername/cartpole-rl"
+    "github": "https://github.com/lizatskhe/cartpole-sarsa/tree/main"
   }
 ]
