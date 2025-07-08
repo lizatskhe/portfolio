@@ -61,7 +61,7 @@
           <h3>Master in AI & Robotics + Master in Engineering in Computer Science</h3>
           <em>Feb 2025 – Jun 2026 (ongoing)</em>
           <p>Sapienza University, Rome</p>
-          <p><strong>GPA:</strong> /30</p>
+          <p><strong>GPA:</strong> 29/30 (First class equivalent)</p>
           <p><strong>Program:</strong> Erasmus Mundus Joint Master in AI (EMAI)</p>
         </div>
 
@@ -90,7 +90,7 @@
       <div class="work-content">
 
         <div class="work-item">
-          <h3>Software Engineer, Deutsche Boerse Services</h3>
+          <h3> Software Engineer, Deutsche Boerse Services</h3>
           <p><em>Prague, CZ — Jan 2023 to Sep 2024</em></p>
           <ul>
             <li>Developed backend applications in Java Spring and Python for the DataShop platform, delivering
@@ -104,7 +104,7 @@
         </div>
 
         <div class="work-item">
-          <h3>IT Project Coordinator, DHL IT Services</h3>
+          <h3> IT Project Coordinator, DHL IT Services</h3>
           <p><em>Prague, CZ — May 2021 to Jan 2023</em></p>
           <ul>
             <li>Coordinated the implementation of the Zscaler project, supporting over 100,000 global users across DHL’s
@@ -161,31 +161,44 @@
 
   <script>
     // Typing animation for name (only when scrolled)
+    let typingTimeouts = []; // to store all typing timeouts
+    let typingInProgress = false;
+
+    function clearTyping() {
+      typingTimeouts.forEach(timeout => clearTimeout(timeout));
+      typingTimeouts = [];
+      typingInProgress = false;
+      const typingElement = document.getElementById('typing-name');
+      typingElement.textContent = '';
+      typingElement.classList.remove('typing-cursor');
+    }
+
     function typeWriterEffect() {
       const text = "Yelizaveta Tskhe ㅤฅ^•ﻌ•^ฅ";
       const typingElement = document.getElementById('typing-name');
       let i = 0;
-
       typingElement.textContent = '';
       typingElement.classList.add('typing-cursor');
+      typingInProgress = true;
 
       function typeWriter() {
         if (i < text.length) {
           typingElement.textContent += text.charAt(i);
+          const timeout = setTimeout(typeWriter, 80);
+          typingTimeouts.push(timeout);
           i++;
-          setTimeout(typeWriter, 80); // Slightly faster since it's triggered by scroll
         } else {
-          // Remove blinking cursor after typing is complete
-          setTimeout(() => {
+          typingInProgress = false;
+          const timeout = setTimeout(() => {
             typingElement.classList.remove('typing-cursor');
           }, 1000);
+          typingTimeouts.push(timeout);
         }
       }
 
       typeWriter();
     }
 
-    // Show/hide nav name based on scroll position
     function handleNavNameVisibility() {
       const header = document.querySelector('header');
       const navName = document.getElementById('nav-name');
@@ -194,17 +207,15 @@
       if (window.scrollY > headerBottom - 100) {
         if (!navName.classList.contains('show')) {
           navName.classList.add('show');
-          // Start typing animation when name becomes visible
-          typeWriterEffect();
+          clearTyping(); // just in case it's partially typed
+          typeWriterEffect(); // start typing from beginning
         }
       } else {
         navName.classList.remove('show');
-        // Reset typing when hidden
-        const typingElement = document.getElementById('typing-name');
-        typingElement.textContent = '';
-        typingElement.classList.remove('typing-cursor');
+        clearTyping(); // cancel and clear everything
       }
     }
+
 
     // Listen for scroll events
     window.addEventListener('scroll', handleNavNameVisibility);

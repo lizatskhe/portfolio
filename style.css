@@ -324,14 +324,15 @@ html {
   margin-bottom: 2.5rem;
 }
 
-.work-item::before {
+/* .work-item::before {
   content: '˙⋆✮';
+  content: '✮';
   position: absolute;
   left: -1.1rem;
   top: 0.3rem;
   width: 15px;
   height: 15px;
-}
+} */
 
 
 #your-name {
