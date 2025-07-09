@@ -5,8 +5,37 @@ body {
   background: #fafafa;
   /* background: linear-gradient(135deg, #C5ADC5, #B2B5E0); */
   color: #333;
+
   /* cursor: none; */
 
+}
+
+.glow-wrap {
+  position: relative;
+  display: inline-block;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.glow-wrap::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  left: -30%;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle, #bcc2f988 0%, transparent 40%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease-out;
+  z-index: -1;
+  filter: blur(40px);
+}
+
+.glow-wrap:hover::before {
+  opacity: 1;
 }
 
 .profile-image {
