@@ -28,7 +28,27 @@
   </nav>
 
   <header>
-    <h1 id="your-name">Yelizaveta Tskhe</h1>
+    <!-- <h1 id="your-name">Yelizaveta Tskhe</h1> -->
+    <h1 id="your-name">
+      <span class="letter">Y</span>
+      <span class="letter">e</span>
+      <span class="letter">l</span>
+      <span class="letter">i</span>
+      <span class="letter">z</span>
+      <span class="letter">a</span>
+      <span class="letter">v</span>
+      <span class="letter">e</span>
+      <span class="letter">t</span>
+      <span class="letter">a</span>
+
+      <span class="letter"> </span>
+      <span class="letter">T</span>
+      <span class="letter">s</span>
+      <span class="letter">k</span>
+      <span class="letter">h</span>
+      <span class="letter">e</span>
+    </h1>
+
     <p>AI & Robotics Master's Student | Ex-Software Engineer</p>
     <p>•ᴗ•</p>
     <a href="assets/cv_tskhe.pdf" download class="btn-cv">Download CV</a>
@@ -162,6 +182,16 @@
   </main>
 
   <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const letters = document.querySelectorAll(".letter");
+      letters.forEach((letter, index) => {
+        const randX = Math.random();
+        const randY = Math.random();
+        letter.style.setProperty('--rand-x', randX);
+        letter.style.setProperty('--rand-y', randY);
+        letter.style.animationDelay = `${index * 0.1}s`;
+      });
+    });
     let typingTimeouts = [];
     let typingInProgress = false;
 

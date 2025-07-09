@@ -3,6 +3,8 @@ body {
   margin: 0;
   padding: 0 1rem;
   background: #fafafa;
+  /* background: linear-gradient(135deg, #C5ADC5, #B2B5E0); */
+
   color: #333;
 }
 
@@ -319,23 +321,66 @@ html {
   margin-bottom: 2.5rem;
 }
 
-/* .work-item::before {
-  content: '˙⋆✮';
-  content: '✮';
-  position: absolute;
-  left: -1.1rem;
-  top: 0.3rem;
-  width: 15px;
-  height: 15px;
-} */
 
-
-#your-name {
+/* #your-name { 
   font-family: "Jersey 20", sans-serif;
   font-size: 5rem;
   color: #333;
   transition: text-shadow 0.3s ease;
   cursor: pointer;
+} */
+
+/* @keyframes rotateIn {
+  0% {
+    transform: rotateY(40deg) scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+#your-name {
+  font-family: "Jersey 20", sans-serif;
+  font-size: 5rem;
+  color: #333;
+  transition: text-shadow 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  animation: rotateIn 1.2s ease-out forwards, bounce 0.6s ease-out 1.2s;
+  transform-origin: center;
+} */
+
+#your-name {
+  display: flex;
+  justify-content: center;
+  gap: 0.2rem;
+  font-family: "Jersey 20", sans-serif;
+  font-size: 5rem;
+  flex-wrap: wrap;
+  transition: text-shadow 0.3s ease;
+
+}
+
+.letter {
+  opacity: 0;
+  transform: translate3d(calc(-100px + 200px * var(--rand-x)),
+      calc(-100px + 200px * var(--rand-y)),
+      0);
+  animation: flyIn 1s ease-out forwards;
+}
+
+@keyframes flyIn {
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 #your-name:hover {
@@ -361,7 +406,10 @@ html {
 
 
 .section-block {
-  background: rgba(255, 255, 255, 0.8);
+  /* background: rgba(255, 255, 255, 0.8); */
+  background-color: rgba(255, 255, 255, 0.7);
+  /* soft card look */
+
   backdrop-filter: blur(5px);
   padding: 2rem;
   border-radius: 16px;
