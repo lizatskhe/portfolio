@@ -185,16 +185,45 @@
 
   <script>
 
+    // Cursor glow effect with delay and smooth following
     const cursorGlow = document.querySelector('.cursor-glow');
+    let mouseX = 0;
+    let mouseY = 0;
+    let glowX = 0;
+    let glowY = 0;
 
-    // Update cursor position
+    // Update mouse position
     document.addEventListener('mousemove', (e) => {
-      cursorGlow.style.left = e.clientX + 'px';
-      cursorGlow.style.top = e.clientY + 'px';
+      mouseX = e.clientX;
+      mouseY = e.clientY;
     });
 
+    // Smooth delayed following animation
+    function animateGlow() {
+      // Easing factor - lower = more delay, higher = faster following
+      const ease = 0.15;
+
+      // Calculate the distance to move
+      const distX = mouseX - glowX;
+      const distY = mouseY - glowY;
+
+      // Move the glow a fraction of the distance
+      glowX += distX * ease;
+      glowY += distY * ease;
+
+      // Update the glow position
+      cursorGlow.style.left = glowX + 'px';
+      cursorGlow.style.top = glowY + 'px';
+
+      // Continue the animation
+      requestAnimationFrame(animateGlow);
+    }
+
+    // Start the animation
+    animateGlow();
+
     // Enhanced glow on interactive elements
-    const interactiveElements = document.querySelectorAll('a, button, .demo-card, .nav-link, .project, .btn-cv');
+    const interactiveElements = document.querySelectorAll('a, button, .project, .btn-cv, .nav-link, .education-card, .work-item, .section-block');
 
     interactiveElements.forEach(element => {
       element.addEventListener('mouseenter', () => {
