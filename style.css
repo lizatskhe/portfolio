@@ -478,17 +478,14 @@ html {
 }
 
 
-
 #your-name {
   display: flex;
   justify-content: center;
-  /* gap: 0.1rem; */
   letter-spacing: 0.015em;
-
   font-family: "Jersey 20", sans-serif;
   font-size: 5rem;
   flex-wrap: wrap;
-  transition: text-shadow 0.3s ease;
+  transition: text-shadow 0.4s ease, color 0.4s ease;
 }
 
 .space {
@@ -511,13 +508,14 @@ html {
   }
 }
 
+
+
 #your-name:hover {
   text-shadow:
-    0 0 5px rgb(2, 7, 100),
-    0 0 10px rgb(4, 4, 247),
-    0 0 20px rgb(3, 0, 5),
-    0 0 30px rgb(0, 0, 0);
-  color: #0397f3;
+    0 0 3px rgba(5, 38, 172, 0.6),
+    0 0 6px rgba(186, 146, 255, 0.5),
+    0 0 12px rgba(186, 146, 255, 0.4);
+  color: #572dfe;
 }
 
 .cherry-bomb-one-regular {
