@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <div class="cursor-glow"></div>
+  <!-- <div class="cursor-glow"></div> -->
 
   <nav id="navbar">
     <div class="nav-container">
@@ -42,14 +42,17 @@
       <span class="letter">e</span>
       <span class="letter">t</span>
       <span class="letter">a</span>
+      <span class="space"></span>
 
-      <span class="letter"> </span>
       <span class="letter">T</span>
       <span class="letter">s</span>
       <span class="letter">k</span>
       <span class="letter">h</span>
       <span class="letter">e</span>
     </h1>
+
+    <img src="assets/6bg.png" alt="me" class="profile-image" />
+
 
     <p>AI & Robotics Master's Student | Ex-Software Engineer</p>
     <p>•ᴗ•</p>
@@ -184,66 +187,6 @@
   </main>
 
   <script>
-
-    // Cursor glow effect with delay and smooth following
-    const cursorGlow = document.querySelector('.cursor-glow');
-    let mouseX = 0;
-    let mouseY = 0;
-    let glowX = 0;
-    let glowY = 0;
-
-    // Update mouse position
-    document.addEventListener('mousemove', (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-    });
-
-    // Smooth delayed following animation
-    function animateGlow() {
-      // Easing factor - lower = more delay, higher = faster following
-      const ease = 0.15;
-
-      // Calculate the distance to move
-      const distX = mouseX - glowX;
-      const distY = mouseY - glowY;
-
-      // Move the glow a fraction of the distance
-      glowX += distX * ease;
-      glowY += distY * ease;
-
-      // Update the glow position
-      cursorGlow.style.left = glowX + 'px';
-      cursorGlow.style.top = glowY + 'px';
-
-      // Continue the animation
-      requestAnimationFrame(animateGlow);
-    }
-
-    // Start the animation
-    animateGlow();
-
-    // Enhanced glow on interactive elements
-    const interactiveElements = document.querySelectorAll('a, button, .project, .btn-cv, .nav-link, .education-card, .work-item, .section-block');
-
-    interactiveElements.forEach(element => {
-      element.addEventListener('mouseenter', () => {
-        cursorGlow.classList.add('hover');
-      });
-
-      element.addEventListener('mouseleave', () => {
-        cursorGlow.classList.remove('hover');
-      });
-    });
-
-    // Hide cursor when mouse leaves window
-    document.addEventListener('mouseleave', () => {
-      cursorGlow.style.opacity = '0';
-    });
-
-    document.addEventListener('mouseenter', () => {
-      cursorGlow.style.opacity = '1';
-    });
-
     document.addEventListener("DOMContentLoaded", () => {
       const letters = document.querySelectorAll(".letter");
       letters.forEach((letter, index) => {
