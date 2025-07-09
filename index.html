@@ -12,6 +12,8 @@
 </head>
 
 <body>
+  <div class="cursor-glow"></div>
+
   <nav id="navbar">
     <div class="nav-container">
       <a href="#" class="nav-name" id="nav-name">
@@ -182,6 +184,37 @@
   </main>
 
   <script>
+
+    const cursorGlow = document.querySelector('.cursor-glow');
+
+    // Update cursor position
+    document.addEventListener('mousemove', (e) => {
+      cursorGlow.style.left = e.clientX + 'px';
+      cursorGlow.style.top = e.clientY + 'px';
+    });
+
+    // Enhanced glow on interactive elements
+    const interactiveElements = document.querySelectorAll('a, button, .demo-card, .nav-link, .project, .btn-cv');
+
+    interactiveElements.forEach(element => {
+      element.addEventListener('mouseenter', () => {
+        cursorGlow.classList.add('hover');
+      });
+
+      element.addEventListener('mouseleave', () => {
+        cursorGlow.classList.remove('hover');
+      });
+    });
+
+    // Hide cursor when mouse leaves window
+    document.addEventListener('mouseleave', () => {
+      cursorGlow.style.opacity = '0';
+    });
+
+    document.addEventListener('mouseenter', () => {
+      cursorGlow.style.opacity = '1';
+    });
+
     document.addEventListener("DOMContentLoaded", () => {
       const letters = document.querySelectorAll(".letter");
       letters.forEach((letter, index) => {
