@@ -3,11 +3,7 @@ body {
   margin: 0;
   padding: 0 1rem;
   background: #fafafa;
-  /* background: linear-gradient(135deg, #C5ADC5, #B2B5E0); */
   color: #333;
-
-  /* cursor: none; */
-
 }
 
 .glow-wrap {
@@ -114,7 +110,6 @@ body {
   }
 }
 
-/* Hover effects - make blob more intense */
 .cursor-glow.hover {
   width: 60px;
   height: 60px;
@@ -227,7 +222,6 @@ nav {
 }
 
 @keyframes blink {
-
   0%,
   50% {
     opacity: 1;
@@ -286,7 +280,6 @@ nav {
   width: 0;
 }
 
-/* Mobile Navigation */
 .nav-toggle {
   display: none;
   background: none;
@@ -320,7 +313,6 @@ html {
 #projects-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* 3 equal columns */
   gap: 20px;
   margin-top: 20px;
 }
@@ -395,12 +387,9 @@ html {
   display: inline-block;
   padding: 12px 25px;
   background-color: #fff;
-  /* White background */
   color: #030cfb;
-  /* Neon purple text */
   font-weight: bold;
   border: 2px solid #070be9;
-  /* Neon purple outline */
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
@@ -532,10 +521,7 @@ html {
 
 
 .section-block {
-  /* background: rgba(255, 255, 255, 0.8); */
   background-color: rgba(255, 255, 255, 0.7);
-  /* soft card look */
-
   backdrop-filter: blur(5px);
   padding: 2rem;
   border-radius: 16px;
@@ -694,11 +680,8 @@ html {
   content: "⋆";
   position: absolute;
   left: 0;
-  /* top: 0.2rem; */
   width: 10px;
   height: 10px;
-  /* background-color: #000000; /* your accent color */
-  /* border-radius: 90%; */
 }
 
 #contact {
@@ -719,7 +702,6 @@ html {
   font-weight: 700;
   color: #222;
   margin: 0;
-  /* Remove bottom margin */
 }
 
 #contact p {
@@ -742,7 +724,6 @@ html {
 
 #contact a:hover {
   color: #ff69b4;
-  /* pink hover */
   text-decoration: underline;
 }
 
