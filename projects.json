@@ -23,7 +23,7 @@
       "Random Forest",
       "DistilBERT"
     ],
-    "details": "Built a pipeline to detect cultural bias in multilingual data using both traditional ML (Random Forests) and fine-tuned language models (DistilBERT). Engineered features from Wikidata entries and addressed class imbalance with weighted loss functions. Also applied LLMs (Phi-3, Llama-3) for OCR error correction and evaluated their output using ROUGE and human agreement metrics. Achieved strong performance with interpretable results and robust cross-model evaluation.",
+    "details": "Built a pipeline to detect cultural bias in multilingual data using both traditional ML (Random Forests) and fine-tuned language models (DistilBERT). Engineered features from Wikidata entries and addressed class imbalance with weighted loss functions. ",
     "github": "https://github.com/lizatskhe/cultural-bias-classification/tree/main"
   },
   {
